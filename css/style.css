@@ -1,0 +1,319 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Open Sans";
+}
+
+html,body{
+	height: 100%;
+}
+
+
+/*DIVs gerais*/
+div.clear{
+	clear: both;
+}
+
+.container{
+	width: 100%;
+	max-width: 1024px;
+	margin: 0 auto;
+}
+
+/*========================================*/
+
+header{
+	background-color: rgb(180,180,180);
+	padding:0 2% 25px 2%;
+}
+
+button{
+	cursor: pointer;
+	color:#0d2b15;
+	font-weight:800;
+	border-radius: 50%;
+	border: 0;
+	background-color: rgb(180,180,180);
+	text-transform: uppercase;
+	font-size:10px;
+}
+
+button:hover{
+	color:darkslategray;
+}
+
+.logo1{
+	float: left;
+	width:150px;
+	height:60px;
+	background-image:url(../imagens/logo1.png);
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+
+}
+
+.logo2{
+	float: right;
+	width:150px;
+	height:60px;
+	background-image:url(../imagens/logo2.png);
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+
+section.cover-form{
+	width: 100%;
+	 
+}
+
+div.bg{
+	position: relative;
+	background-image: url(../imagens/bg-form_a);
+	background-position: center;
+	background-size: cover;
+	height:560px;
+}
+
+.form-container{
+	position: absolute;
+	right: 30px;
+	width: 400px;
+	top: -2.5%;
+	height:105%;
+	background-color:rgba(200, 206, 207,0.7);
+	box-shadow: 5px 5px 3px 1px rgba(60,60,60,0.8);/* primeiro é horizontal, segundo vertical,
+	terceiro é o blur e quarto o spread */
+	
+}
+
+.form-container h2{
+	font-weight:500;
+	padding:20px 15px;
+	font-size:16px;
+	color: black;
+	background-color: rgb(230,230,230);
+
+}
+
+.form-container form{
+	margin-top:20px;
+	padding: 20px;
+}
+
+.form-container form p{
+	font-size:14px;
+	color: #525252;
+}
+
+.form-wraper:not(:first-child){
+	margin-top:35px;
+}
+
+.form-wraper:last-child{
+	margin-top:40px;
+}
+
+.form-wraper p{
+	font-weight: bold;
+}
+
+.form-container form input[type="text"]{
+	width: 100%;
+	font-size: 14px;
+	border: 1px solid #ccc;
+	height: 45px;
+	outline: 0;
+	line-height: 45px;
+	padding-left:10px;
+}
+
+.form-container form input[type="submit"]{
+	cursor: pointer;
+	background-color:#033C50;
+	width: 100%;
+	height: 50px;
+	text-transform: uppercase;
+	color: white;
+	font-size: 18px;
+	border: 0;
+
+}
+
+section.chamada{
+	width: 100%;
+	text-align:center;
+}	
+
+section.chamada div.container{
+	background-color:#E4E0E0;
+	padding: 50px 0;
+}
+
+section.chamada h2{
+	width: 98%;
+	max-width: 1080px;
+	display: inline-block;
+	font-size:26px;
+	font-weight: normal;
+}
+
+section.chamada p{
+	margin-top: 10px;
+}
+
+section.chamada span{
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 20px;
+	color:#033C50;
+}
+
+div.flex-mosaico{
+	display: flex;
+}
+
+div.item1-mosaico{
+	background-position: center;
+	background-size: cover;
+	width:60%;	
+}
+
+div.item2-mosaico{
+	width:40%;
+	padding:20px 40px;
+	background-color:#e0faff ;
+}
+
+
+footer div.container{
+	background-color: rgb(180,180,180);
+	padding:10px;
+}
+
+
+footer{
+	text-align: center;
+}
+
+footer img{
+	margin-top: 20px;
+	width: 120px;
+}
+
+footer p{
+	margin-top: 10px;
+	font-size:12px;
+	font-weight: bold;
+	font-style: italic;
+}
+
+p.autorizacao{
+	font-style: normal;
+}
+
+.contato{
+	color:darkblue;
+}
+
+.email{
+	color: darkblue;
+}
+
+div.voltarTopo{
+	display: flex;
+	justify-content: flex-end;
+}
+
+
+div.voltarTopo a{
+	text-decoration: none;
+	color:#0d2b15;
+	font-weight: 700;
+	font-size: 12px;
+}
+
+div.voltarTopo a:hover{
+	color:darkslategray;
+}
+
+
+
+/*----------media queries-----------*/
+
+@media screen and (max-width: 960px){
+	.dark div.item2-mosaico{
+		background-color:#282929;
+		color: white;
+		font-weight:700;
+	}
+
+	.bg{
+		height: auto;
+		padding: 5px 0;
+		text-align: center;
+	}
+
+	.form-container{
+		height: auto;
+		width: 98%;
+		max-width: 400px;
+		position: static;
+		display: inline-block;
+	}
+}
+
+@media screen and (max-width: 768px){
+	div.flex-mosaico{
+		display: block;
+	}
+
+	div.item1-mosaico{
+		padding-top:80%;
+		width: 100%;
+	}
+
+	div.item2-mosaico{
+		padding:8%;
+		width: 100%;
+		text-align: justify;
+	}
+}
+
+
+@media screen and (max-width: 580px){
+	header{
+		text-align: center;
+	}
+
+	[class^="logo"]{ /* ^= significa tudo que começa com...*/
+		margin-top: 10px;
+		display: inline-block;
+		float: none;
+	}
+
+	button{
+		font-size:8px;
+		color:#0d2b15;
+		float: right;
+
+	}
+
+	button:hover{
+		color:darkslategray;
+	}
+}
+
+/*----------dark-----------*/
+
+.dark{
+	background-color:#282929;
+}
+
+.dark button{
+	color: #0d2b15;
+}
+
